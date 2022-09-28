@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table>
+            <caption>Temperature</caption>
+            <tr>
+                <td>Celsius</td>
+                <td><input type="number" name ="C" ></td>
+                
+            </tr>
+            
+            <tr>
+                <td>Fareinheit</td>
+                <td><input type="number" name="F"></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="change()">Convert</button></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        function change()
+        {
+            let C = Number (document.getElementsByName("C")[0].value); Number()
+           
+            let  F  = ((9*C)/5) + 32 ;
+            document.getElementsByName("F")[0].value = F ;
+
+        }
+    </script>
+</html>

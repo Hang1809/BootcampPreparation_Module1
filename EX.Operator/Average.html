@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+       
+        <table>
+            <tr>
+                <td>Physics</td>
+                <td><input type="number" name="Phys" ></td>
+            </tr>
+            <tr>
+                <td>Chemistry</td>
+                <td><input type="number" name="chemis"></td>
+            </tr>
+            <tr>
+                <td>Biology</td>
+                <td><input type="number" name="bio"></td>
+            </tr>
+            <tr>
+                <td>Sum</td>
+                <td><input type="number" name="sum"></td>
+                <td><button onclick="sum()">Result</button></td>
+            </tr>
+            <tr>
+                <td>Average</td>
+                <td><input type="number" name="avr"></td>
+                <td><button onclick="avr()">Check</button></td>
+            </tr>
+                
+         
+        </table>
+        
+
+    </body>
+
+    <script>
+        function sum ()
+        {
+            let Phys = Number (document.getElementsByName("Phys")[0].value);Number()
+            let chemis = Number (document.getElementsByName("chemis")[0].value);
+            let bio = Number (document.getElementsByName("bio")[0].value);
+            let result  = Phys+chemis+bio ;
+            document.getElementsByName("sum")[0].value=result ;
+
+        }
+        function avr()
+        {
+            let Phys = Number (document.getElementsByName("Phys")[0].value);Number()
+            let chemis = Number (document.getElementsByName("chemis")[0].value);
+            let bio = Number (document.getElementsByName("bio")[0].value);
+            let Check  = (Phys+chemis+bio)/3;
+            document.getElementsByName("avr")[0].value=Check ;
+
+        }
+    </script>
+   
+
+</html>

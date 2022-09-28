@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Type anything slowly</h3>
+    
+        <p>
+            <textarea id="text" cols="10" rows="15" style="width: 30%;" onkeydown="TypeText()"></textarea>
+        </p>
+    
+</body>
+<script>
+    function TypeText() {
+        let a = ["Y","O","U"," ","A","R","E"," ","A","M","A","Z","I","N","G"];
+        let n="";
+        t = document.getElementById("text").value;
+
+        for (var i = 0; i < t.length; i++) {
+            n = n + a[i];
+            if (i == 15) {
+                document.getElementById("text").value = "";
+                n = "";
+            }
+        }
+        document.getElementById("text").value = n;
+        n = "";
+        setTimeout( "TypeText()", 1);
+    }
+</script>
+
+</html>

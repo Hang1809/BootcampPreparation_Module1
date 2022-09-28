@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+        <body>
+            <h1 onmouseover="this.style.color='green'"
+                onmouseout="this.innerHTML='MARU'"
+                            
+            >Welcome here</h1>
+            <p onmousemove="this.innerHTML='WELCOME TO WABISABI'">WabiSabi</p>
+            <table border="1">
+                <tr>
+                    <td><input id="color" type="color" oninput="changeColor()"></td>
+                    <td>Họ và Tên</td>
+                    <td> <input type="name"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" onclick="alert('here you are');">Apply</button>
+                    <button type="reset" onclick="alert('Try it again');">Reset</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="button" onclick="alert ('here you are');" >LOG IN </button>  </td>
+                </tr>
+                <tr>
+                    <td><button type="button" 
+                        onmousemove="this.style.color='red'"
+                        onmouseout="this.innerHTML='Yept'" >
+                        Wonderful</button></td>
+                </tr>
+                
+            </table>
+
+        </body>
+        <script>
+            function changeColor(){
+                document.getElementsByTagName('table').style.backgroundColor = document.getElementById('color').value 
+            }
+
+        </script>
+    
+   
+</html>

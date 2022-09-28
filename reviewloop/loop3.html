@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script>
+            let num = Number(prompt("Nhập vào số lượng số Fibonacci : "));
+                let result = "1";
+                let fib = 0;
+                let x1 = 0;
+                let x2 = 1;
+                for (let i = 1; i <= num; i++) {
+                    fib = x1 + x2;
+                    result += " " + fib;
+                    x1 = x2;
+                    x2 = fib;
+                }
+                document.write(`Dãy số Fibonacci: ${result}`);
+        </script>
+    </body>
+    </html>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table>
+            <caption>Tính Chu Vi và Diện Tích</caption>
+            <tr>
+                <td>Bán kính</td>
+                <td><input type="number" name = "r" ></td>
+            </tr>
+            <tr>
+                <td>Chu vi</td>
+                <td><input type="number" name="c"></td>
+                <td><button onclick="calculator()">Result</button></td>
+            </tr>
+            <tr>
+                <td>Diện tích </td>
+                <td><input type="number" name = "s"></td>
+                <td><button onclick="findA()"> Area check </button></td>
+            </tr>
+        </table>
+    </body>
+
+    <script>
+                //tính chu vi//
+                function calculator()
+                {
+                let r = Number (document.getElementsByName("r")[0].value);Number ()
+
+                let c = (2*r)* 3.14 ;
+                document.getElementsByName("c")[0].value = c;
+                }
+
+                //tính diện tích//
+                function findA()
+                {
+                let r = Number (document.getElementsByName("r")[0].value);Number ()
+
+                let s = r*r*3.14 ;
+                document.getElementsByName("s")[0].value = s;
+                }
+                
+    </script>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        body {padding: 50 ;}
+        
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(odd) {background-color: #f2f2f2;}
+        </style>  
+
+    </head>
+
+<body>
+    <form method="get" action ="index.html">
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+
+    
+        <label for="age"> <b>What is your age range?</b></label>
+        <select name="age" id="age">
+          <option value="18-24">18-24</option>
+          <option value="25-34">25-34</option>
+          <option value="35-50">35-50</option>
+          <option value="50+">50+</option>
+        </select>
+
+    
+    <p>
+    <label for="income"><b>What is your yearly income range?</b></label>
+    <select name="income" id="income">
+      <option value="$0-$25,000">$0-$25,000</option>
+      <option value="$25,000-$50,000">$25,000-$50,000</option>
+      <option value="$50,000-$100,000">50,000-$100,000</option>
+      <option value="$100,0000+">50+</option></select></p>
+    </select>
+
+    <br><b>Gender</b>
+        <br><label><input name="gender"  type="radio" checked/> Male </label> 
+        <br> <label><input name="gender"  type="radio"/> Female </label> 
+        <br><label><input name="gender"  type="radio"/> Nonbinary </label> 
+        <br><label><input name="gender"  type="radio"/> Other </label>  <br>
+
+    <br><b>Which of the following products have your purchased in the last 2 months.
+         Please check all that apply.</b>
+    <br><label><input name="product"  type="checkbox"/>Product 1</label> <br/>
+    <label><input name="product"  type="checkbox"/> Product 2</label> <br/>
+    <label><input name="product"  type="checkbox"/> Product 3</label> <br/> <br>
+
+    <br><b>How often would you use our new product?</b>
+    <br><label><input name="Howoften"  type="radio"/>Daily</label> <br/>
+    <br><label><input name="Howoften"  type="radio"/>Weekly</label> <br/>
+    <br><label><input name="Howoften"  type="radio"/>Monthly</label> <br/>
+    
+    <br><b>What would you pay for the new product?</b>
+    <p> $ <input type = "text" name="dollars" size="5"/>.
+        <input type = "text" name="cents" size="1"/> </p>
+        <p>   Dollars Cents </p>
+
+    <br> 
+    <b>What features would you like to see in new product?</b>
+    <br><textarea id="review" name="review" rows="5" cols="100">  </textarea>
+    
+   
+    <br>
+    <br> Please rate your level of agreeament with following statement.
+    <br>
+    <br><table >
+      
+        <tr>
+            <th > </th>
+            <th >Strongly Disagree</th>
+            <th >Disagree</th>
+            <th >Agree</th>
+            <th >Strongly agree</th>       
+        </tr>
+        <tr>
+            <td><b>Our product are priced fairly</b></td>
+            <td><label><input name="score"  type="radio" checked/> 1</label></td>
+            <td><label><input name="score"  type="radio" checked/> 2</label></td>
+            <td><label><input name="score"  type="radio" checked/> 3</label></td>
+            <td><label><input name="score"  type="radio" checked/> 4</label></td>
+        </tr>
+        <tr>
+            <td><b>Our product are high quality</b></td>
+            <td><label><input name="score"  type="radio" checked/> 1</label></td>
+            <td><label><input name="score"  type="radio" checked/> 2</label></td>
+            <td><label><input name="score"  type="radio" checked/> 3</label></td>
+            <td><label><input name="score"  type="radio" checked/> 4</label></td>
+        </tr>
+        <tr>
+            <td><b>You should recommend our product to a friend or coworker </b> </td>
+            <td><label><input name="score"  type="radio" checked/> 1</label></td>
+            <td><label><input name="score"  type="radio" checked/> 2</label></td>
+            <td><label><input name="score"  type="radio" checked/> 3</label></td>
+            <td><label><input name="score"  type="radio" checked/> 4</label></td>   
+        </tr>
+     </table>
+     <br> <button type="button" onclick="get">Submit</button>
+    </form>
+</body>
+</html>

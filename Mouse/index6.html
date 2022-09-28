@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 style="position:absolute; left:220px; top:175px;">
+            <b>Do you love me?</b></h1>
+        <br> <button type="button" onclick="showmessageY()"
+            style="position:absolute; left:285px; top:235px;"
+            >YES</button>
+            <button type="button" 
+            id="run" onmouseover="mouseOver()" onmouseout="mouseOut()" 
+            style="position:absolute; left:360px; top:235px;">
+    
+            NO</button>
+    </body>
+
+    <script>
+        function showmessageY(){
+            alert ('<3')
+        }
+        function mouseOver(){
+
+            var x = Math.round(Math.random() * window.innerWidth);
+            var y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('run').style.left = x + 'px';
+            document.getElementById('run').style.top = y + 'px';
+
+        }
+    </script>
+</html>

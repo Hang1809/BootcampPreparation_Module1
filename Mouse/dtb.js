@@ -1,0 +1,11 @@
+
+let dtb=parseInt(prompt('nhập dtb'));
+           let result = (dtb>=9) ? 
+           "Xuất sắc" : 
+           (dtb>=8) ? "giỏi" :
+           (dtb>=7)? "Khá" :
+           (dtb>=5)?"Trung bình" :
+           (dtb<5 )?"Yếu":
+           (dtb>10)? "Không đúng":
+           (dtb<0)? "Không đúng":
+           console.log(result);

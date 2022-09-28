@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            .sao {
+                color: red ;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="index2.html" method="get"></form>
+        
+           <h1 style="text-align: center;">  
+                
+                <b>Tờ khai y tế/Vietnam Health Declaration</b></h1>
+
+         
+            <table>
+                <caption style="text-align: center;">Cho người nhập cảnh
+                    <br>Entry Declaration</caption>
+
+                    <tr>
+                        <td colspan="4" ><b>
+                            Chọn ngôn ngữ để khai báo y tế /Select the language to declare health:</b></td>
+                        <td ><p><button type="button">Cập nhập Tờ khai</button>
+                        <button type="button">Hướng dẫn hành khách</button></p></td>
+                    </tr>
+                    <tr>
+                       <td><img src="https://tokhaiyte.vn/App/images/Language/vi-big.png" >
+                       <img src="https://tokhaiyte.vn/App/images/Language/en-big.png"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" style="text-align: center;"><b>TỜ KHAI Y TẾ ĐỐI VỚI NGƯỜI NHẬP CẢNH</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" style="text-align: center;"><b>ĐÂY LÀ TÀI LIỆU QUAN TRỌNG, THÔNG TIN CỦA ANH/CHỊ SẼ GIÚP CƠ QUAN Y TẾ
+                         LIÊN LẠC KHI CẦN THIẾT ĐỂ PHÒNG CHỐNG DỊCH BỆNH TRUYỀN NHIỄM</b></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" style="text-align: center; color: red;">
+                            <b>Khuyến cáo: Khai báo thông tin sai 
+                            là vi phạm pháp luật Việt Nam và có thể xử lý hình sự</b></td>
+                    </tr>
+                    <tr>
+                
+                        <td >Đối tượng <span class="sao">(*)</span></td>
+                        <td >Cửa khẩu <span class="sao">(*)</span></td>
+                    </tr>
+                    <tr>
+                        <td ><select name="people" >
+                            <option value= "chọn" >Chuyên gia</option>
+                            <option value= "chọn" >-chọn-</option>
+                            <option value= "chọn" >Người Việt Nam</option>
+                            <option value= "chọn" >Sinh viên Quốc Tế</option>
+                            <option value= "chọn" >Khác</option>
+                             </select></td>
+                        <td ><select name="port" >
+                            <option value= "chọn" >-chọn-</option>
+                            <option value= "chọn" >A Pa Chải</option>
+                            <option value= "chọn" >A Đớt</option>
+                            <option value= "chọn" >Bu Prăng</option>
+                            <option value= "chọn" >Buôn Đôn</option>
+                            <option value= "chọn" >Bà Rịa</option>
+                            </select></td>
+                    </tr>    
+                    <tr>
+                        <td>Họ tên (ghi chữ IN HOA) 
+                            <span class="sao">(*)</span></td>
+                    </tr>
+                    <tr>
+                        <td ><input type="text" name="họ tên"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Ngày tháng năm sinh (*)</td>
+                        <td>Giới tính <span class="sao">(*)</span></td>
+                        <td>Quốc tịch <span class="sao">(*)</span></td>
+                    </tr>
+                    <tr>
+                        <td><select name="Date" >
+                            <option value= "chọn" >1</option>
+                            <option value= "chọn" >2</option>
+                            <option value= "chọn" >3</option>
+                            <option value= "chọn" >4</option>
+                            <option value= "chọn" >5</option>
+                        </select>Ngày</td>
+                        <td><select name="month" >
+                            <option value= "chọn" >1</option>
+                            <option value= "chọn" >2</option>
+                            <option value= "chọn" >3</option>
+                            <option value= "chọn" >4</option>
+                            <option value= "chọn" >5</option>
+                        </select> Tháng </td>
+                        <td><select name="year" >
+                            <option value= "chọn" >1990</option>
+                            <option value= "chọn" >1995</option>
+                            <option value= "chọn" >1996</option>
+                            <option value= "chọn" >1998</option>
+                            <option value= "chọn" >2000</option>
+                        </select>Năm</td>
+                        <td><select name="gender" >
+                            <option value= "chọn" >-chọn-</option>
+                            <option value= "chọn" >Nam</option>
+                            <option value= "chọn" >Nữ</option>
+                            <option value= "chọn" >Khác</option>
+                       </select></td>
+                        <td><select name="Country" >
+                            <option value= "chọn" >Việt Nam</option>
+                            <option value= "chọn" >Mỹ</option>
+                            <option value= "chọn" >Anh</option>
+                            <option value= "chọn" >Pháp</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Số hiệu phương tiện <span class="sao">(*)</span></td>
+                        <td >Số ghế</td>
+                    </tr>
+                    <tr>
+                        <td  >
+                            <input type="text" name="số hiệu"></td>
+                        <td >
+                            <input type="text" name="số ghế"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" >Ngày khởi hành<span class="sao">(*)</span></td>
+                        <td colspan="3">Ngày nhập cảnh <span class="sao">(*)</span></td>
+                    </tr>
+                    <tr>
+                        <td><select name="Ngày" >
+                            <option value= "chọn" >1</option>
+                            <option value= "chọn" >15</option>
+                            <option value= "chọn" >20</option>
+                            <option value= "chọn" >30</option>
+                        </select>Ngày</td>
+                        <td><select name="Tháng" >
+                            <option value= "chọn" >1</option>
+                            <option value= "chọn" >2</option>
+                            <option value= "chọn" >3</option>
+                            <option value= "chọn" >4</option>
+                        </select>Tháng</td>
+                        <td><select name="năm" >
+                            <option value= "chọn" >Năm</option>
+                            <option value= "chọn" >2023</option>
+                            <option value= "chọn" >2022</option>
+                            <option value= "chọn" >2021</option>    
+                        </select>Năm</td>
+                        <td><select name="Ngày" >
+                            <option value= "chọn" >1</option>
+                            <option value= "chọn" >15</option>
+                            <option value= "chọn" >20</option>
+                            <option value= "chọn" >30</option>
+                        </select>Ngày</td>
+                        <td><select name="Tháng" >
+                            <option value= "chọn" >1</option>
+                            <option value= "chọn" >2</option>
+                            <option value= "chọn" >3</option>
+                            <option value= "chọn" >4</option>
+                        </select>Tháng</td>
+                        <td><select name="năm" >
+                            <option value= "chọn" >Năm</option>
+                            <option value= "chọn" >2023</option>
+                            <option value= "chọn" >2022</option>
+                            <option value= "chọn" >2021</option>    
+                        </select>Năm</td>
+                    </tr>
+                    <tr>
+                        <td><b>Địa điểm khởi hành (tỉnh/quốc gia)</b></td>
+                    </tr>
+                    <tr>
+                        <td >Quốc gia/ Vùng lãnh thổ <span class="sao">(*)</span></td>
+                        <td >Tỉnh<span class="sao">(*)</span></td> 
+                    </tr>
+                    <tr>
+                        <td ><select name="QG" >
+                            <option value= "chọn" >-chọn-</option>
+                            <option value= "MC" >Ma Cao</option>
+                            <option value= "HK" >Hồng Kông</option>
+                            </select></td>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                        <td>Địa điểm nơi đến (tỉnh/quốc gia)</td>
+                    </tr>
+                    <tr>
+                        <td >Quốc gia/ Vùng lãnh thổ <span class="sao">(*)</span></td>
+                        <td >Tỉnh<span class="sao">(*)</span></td> 
+                    </tr>
+                    <tr>
+                        <td ><select name="QG" >
+                            <option value= "VN" >Việt Nam</option>
+                            <option value= "TQ" >Trung Quốc</option>
+                            <option value= "Lào" >Lào</option>
+                            </select></td>
+                        <td ><select name="city" >
+                            <option value= "HN" >Hà Nội</option>
+                            <option value= "SG" >Sài Gòn</option>
+                            <option value= "Hue" >Huế</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Trong vòng 14 ngày qua, 
+                            Anh/Chị có đến quốc gia/vùng lãnh thổ nào? (*)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6"><textarea name="check" rows="3" 
+                            cols="150"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><b>Nơi lưu trú sau cách ly tập trung
+                        </b></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2">Tỉnh / thành <span class="sao">(*)</span></td>
+                        <td colspan="2">Quận / Huyện <span class="sao">(*)</span></td>
+                        <td colspan="2">Phường / Xã <span class="sao">(*)</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ><select name="province" >
+                            <option value= "chọn" >TP Hà Nội</option>
+                            <option value= "chọn" >TP Hồ Chí Minh</option>
+                            </select></td>
+                        <td colspan="2" ><select name="dictrict" >
+                            <option value= "chọn" >-chọn-</option>
+                            </select></td>
+                        <td colspan="2" ><select name="region" >
+                            <option value= "chọn" >-chọn-</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ lưu trú sau cách ly <span class="sao">(*)</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6"><textarea name="address" rows="3" 
+                            cols="150"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><b>Địa chỉ liên lạc tại Việt Nam
+                        </b></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="2">Tỉnh / thành <span class="sao">(*)</span></td>
+                        <td colspan="2">Quận / Huyện<span class="sao">(*)</span></td>
+                        <td colspan="2">Phường / Xã <span class="sao">(*)</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ><select name="province" >
+                            <option value= "chọn" >TP Hà Nội</option>
+                            <option value= "chọn" >TP Hồ Chí Minh</option>
+                            </select></td>
+                        <td colspan="2" ><select name="dictrict" >
+                            <option value= "chọn" >-chọn-</option>
+                            </select></td>
+                        <td colspan="2" ><select name="region" >
+                            <option value= "chọn" >-chọn-</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ nơi ở tại Việt Nam (*)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6"><textarea name="address" rows="3" 
+                            cols="150"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="=3"><i>
+                            Số điện thoại bạn sẽ sử dụng tại Việt Nam 
+                            (Là số Roaming hoặc số Việt Nam)</i></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Điện Thoại</td>
+                        <td colspan="3">Email</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><input type="number" name="phone"></td>
+                        <td colspan="3"><input type="text" name="Email"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">
+                            <b>Trong vòng 14 ngày (tính đến thời điểm làm thủ tục xuất cảnh, nhập cảnh, quá cảnh) 
+                                Anh/Chị có thấy xuất hiện dấu hiệu nào sau đây không? (*)</b>
+                        </td>
+                    </tr>
+                    <table border="1" style="display: inline-flexbox;">
+                        <tr>
+                            <td>Triệu chứng</td>
+                            <td>Có</td>
+                            <td>Không</td>
+                            <td>Triệu chứng</td>
+                            <td>Có</td>
+                            <td>Không</td>
+                        </tr>
+                        <tr>
+                            <td>Sốt<span class="sao">(*)</span></td>
+                            <td><input type="radio"> </td>
+                            <td><input type="radio"></td>
+                            <td>Nôn/Buồn nôn <span class="sao">(*)</span></td>
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                        </tr>
+                        <tr>
+                            <td>Ho<span class="sao">(*)</span></td>
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                            <td>Tiêu chảy<span class="sao">(*)</span></td>
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                        </tr>
+                        <tr>
+                            <td>Khó thở<span class="sao">(*)</span></td>
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                            <td>Xuất huyết ngoài da<span class="sao">(*)</span></td>
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                        </tr>
+                        <tr>
+                            <td>Đau họng<span class="sao">(*)</span></td>
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                            <td>Nổi ban ngoài da <span class="sao">(*)</span></td>
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                        </tr>
+                    </table>
+                    <tr>
+                        <td>
+                            <b>Lịch sử phơi nhiễm: Trong vòng 14 ngày qua, Anh/Chị có 
+                                <span class="sao">(*)</span></b>
+                        </td>
+                    </tr>
+                    <table border="1">
+                        <tr>
+                            <td></td>
+                            <td>Có</td>
+                            <td>Không</td>
+                        </tr>
+                        <tr>
+                            <td>Đến trang trại chăn nuôi / chợ buôn bán động vật sống / 
+                                cơ sở giết mổ động vật / tiếp xúc động vật <span class="sao">(*)</span></td>
+                        
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Tiếp xúc gần với người mắc bệnh viêm đường hô hấp do nCoV 
+                                <span class="sao">(*)</span>
+                            </td>
+                        
+                            <td><input type="radio"></td>
+                            <td><input type="radio"></td>
+                        </tr>
+                    </table>
+                    <tr>
+                        <td><b>Chọn cơ sở cách ly 
+                            <span class="sao">(*)</span></b></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="CSCL">Cơ sở cách ly tập trung</td>
+                        <td><input type="radio" name="CSCL">Cơ sở cách ly tự chọn</td>
+                        <td><input type="radio"name="CSCL" oninput="chonCSCL" >Khác</td>
+                        <td><input type="hidden" name="other"></td>
+                    </tr>
+                    <tr>
+                       <br><td><b>Thông tin tiêm chủng Covid-19</b></td>
+                    </tr>
+                    <table border="1">
+                        <tr>
+                            <td>Mũi số</td>
+                            <td>Tên vắc xin</td>
+                            <td>Ngày tiêm</td>
+                            <td>Cơ sở y tế tiêm</td>
+                            <td>Quốc gia</td>
+                            <td>File chứng nhận tiêm</td>
+                        </tr>
+                    </table>
+                    <tr>
+                        <td><button type="button" name="MT"> Thêm mũi tiêm</button></td>
+                    </tr><br>
+                    <tr>
+                       <br>
+                        <td>
+                            <b>Thông tin xét nghiệm Covid-19</b>
+                        </td>
+                    </tr>
+
+                    <table >
+                    <tr>
+                        <br>
+                        <td>Kết quả xét nghiệm</td>
+                        <td>Ngày kết quả</td>
+                        <td>Loại xét nghiệm</td>
+                        <td>Quốc gia</td>
+                        <td>File chứng nhận kết quả</td>
+                    </tr>
+                    <br><tr>
+                        <td><select name="loại" >
+                            <option value= "chọn" >-chọn-</option>
+                            <option value= "chọn" >Dương Tính</option>
+                            <option value= "chọn" >Âm Tính</option></select></td>
+                        <td><input type="date" name="ngày"></td>
+                        <td><select name="loại" >
+                            <option value= "chọn" >-chọn-</option>
+                            <option value= "chọn" >Test nhanh</option>
+                            <option value= "chọn" >PCR</option></select></td>
+                        <td><select name="QG" >
+                            <option value= "chọn" >Việt Nam</option>
+                            <option value= "chọn" >Trung Quốc</option>
+                            <option value= "chọn" >Lào</option>
+                            </select></td>
+                        <td><input type="file"></td>
+                    </tr>
+                </table>
+
+                <tr>
+                    <br>
+                     <td>
+                         <b>Thông tin chứng nhận khỏi bệnh Covid-19</b>
+                     </td>
+                 </tr>
+
+                 <table >
+                 <tr>
+                     <br>
+                     <td>Ngày khỏi bệnh</td>
+                     <td>Cơ sở điều trị</td>
+                     <td>Quốc gia</td>
+                     <td>File chứng nhận kết quả</td>
+                 </tr>
+                 <br><tr>
+                     
+                     <td><input type="date" name="ngày"></td>
+                     <td><input type="map" name="địa điểm"></td>
+                     <td><select name="QG" >
+                         <option value= "chọn" >Việt Nam</option>
+                         <option value= "chọn" >Trung Quốc</option>
+                         <option value= "chọn" >Lào</option>
+                         </select></td>
+                     <td><input type="text"></td>
+                 </tr>
+             </table><br>
+             <tr>
+                 <td colspan="2"><b>Đăng ký sim sử dụng tại Việt Nam</b></td>
+                 <td><b>VIETTEL</b></td>
+                 <td><b>VINAPHONE</b></td>
+                 <td><b>MOBIPHONE</b></td>
+             </tr>
+             <br>
+             <tr>
+                 <td>Mã bảo mật <span class="sao">(*)</span></td>
+             </tr>
+             <br>
+             <tr>
+                 <td>
+                     <img 
+                     src="https://tokhaiyte.vn/api/Common/Captcha/getCaptcha?returnType=image&site=2001432&width=150&height=50&t=1646010799427">
+                 </td>
+                 <td><input type="text" placeholder="Nhập mã bảo mật tại đây"></td>
+             </tr>
+             <br>
+             <tr>
+                 <br>
+                 <td colspan="6" style= "color: red;">
+                    Dữ liệu bạn cung cấp hoàn toàn bảo mật và chỉ phục vụ cho việc phòng chống dịch, 
+                    thuộc quản lý của Ban chỉ đạo quốc gia về Phòng chống dịch Covid-19. Khi bạn nhấn nút "Gửi" là bạn đã hiểu và đồng ý.
+                </td>
+             </tr>
+             <br>
+             <tr>
+                 <td colspan="6" style="text-align: center;"><button type="button">Gửi Tờ Khai</button></td>
+             </tr>
+
+            </table>
+    </body>
+
+   <script>
+       function chonCSCL(){
+           let
+       }
+   </script>
+</html>
+
+           

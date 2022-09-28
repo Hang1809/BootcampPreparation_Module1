@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table>
+            <cation><b>BMI CALCULATOR</b></cation>
+            <tr>
+                <td>Height</td>
+                <td><input type="number" name="height"></td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td><input type="number" name="weight"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="checkBMI()">
+                    Calculate BMI </button></td>
+                <td><input type="text" name="BMI"></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        function
+        checkBMI() {
+            let height = (Number(document.getElementsByName("height")[0].value));
+            let weight = (Number(document.getElementsByName("weight")[0].value));
+            let BMI = weight / ( height ^ 2 );
+            document.getElementsByName("BMI")[0].value = BMI ;
+
+            if ( BMI < 18)
+            document.write("Underweight");
+            else if (BMI < 25.0)
+            document.write("Normal");
+            else if (BMI < 30.0)
+            document.write("Overweight");
+            else
+            document.write("Obese");
+
+        }
+    </script>
+</html>

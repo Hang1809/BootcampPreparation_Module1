@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table>
+            <caption>Exchange Money</caption>
+            <tr>
+                <td>Amount</td>
+                <td>From Currency</td>
+                <td>To Currency</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="Am"></td>
+                
+                <td>
+                    <select name="select1">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="select2">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                    </select>
+                </td>
+                
+                <td><button onclick="Exchange()">Convert</td>
+            </tr>
+            <tr>
+                <td >Result:<p id="RS"></p> </td>
+                
+            </tr>
+           
+        </table>
+
+        <script>
+            function Exchange()
+            {
+                
+                let Am = Number(document.getElementsByName("Am")[0].value);
+                let select1= document.getElementsByName("select1")[0].value;
+                let select2 = document.getElementsByName("select2")[0].value;
+                
+                //neu select1==select2
+                    //RS=Am
+
+                if ( select1 == select2)
+                {
+                    let RS = Am;
+                    document.getElementById("RS").innerHTML = RS;
+
+                }
+                
+                //neu select1=="VND" && select2 =="USD"
+                if (select1== "VND" && select2=="USD")
+                {
+                    let RS = Am/23000;
+                    document.getElementById("RS").innerHTML = RS;
+                }
+                 //neu select1  =="USD" && select2 =="VND"
+                if (select1 =="USD" && select2=="VND")
+                {
+                    let RS = Am*23000;
+                    document.getElementById("RS").innerHTML = RS;
+                }
+                 
+              
+            }
+
+        </script>
+    </body>
+</html>

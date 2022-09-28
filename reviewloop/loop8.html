@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game Guess Number</h1>
+    <h3>Guess Number !!! You have 3 times to check it out !!!</h3>
+
+    <button type="button" onclick="guessNumber()">Play</button>
+
+    <script>
+        function guessNumber() {
+            let i = 0;
+            let valueRange = Number(prompt("Enter a range number from 1 to : "));
+            let randomNumber = Math.round(Math.random() * valueRange);
+            let number = Number(prompt("Enter a number here !!! "));
+            while (i < 3) {
+                if (number == randomNumber) {
+                    alert("Congratulations!");
+                    break;
+                } else if (number != randomNumber) {
+                    alert("Wrong number ! Try again !");
+                    let number = Number(prompt("Enter a number here !!! "));
+                }
+                i++;
+            }
+        }
+
+    </script>
+</body>
+</html>

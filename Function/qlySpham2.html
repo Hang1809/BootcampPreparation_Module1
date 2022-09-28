@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn{
+        border: none;
+        border-radius: 3px;
+        padding: 12px 20px;
+        color: white;
+      }
+      .btn-add:hover, .btn-edit:hover, .btn-save:hover{
+          background-color:#47e02f ;
+      }
+      .btn-delete, .btn-cancel{
+        background-color: #E84118;
+      }
+      .btn-delete:hover, .btn-cancel:hover{
+        background-color: #fa4831e8;
+      }
+      .btn-edit, .btn-add, .btn-save{
+        background-color: #2AB116;
+      }
+      input {
+        padding: 10px;
+        width: 250px;
+      }
+      td{
+          padding: 5px 50px;
+      }
+      table tr:nth-child(odd){
+        background-color: rgb(224, 224, 224);
+        border: 1px solid rgb(224, 224, 224);
+      }
+      table, td, tr{
+        border-collapse: collapse;
+      }
+      .btn-save, .btn-cancel{
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="list">
+        <div>
+            <input type="text" id="productName" placeholder="New Product" />
+            <button class="btn btn-add" onclick="addProduct()">Add</button>
+          </div>
+          <h1>Display All Product</h1>
+          <h3>Product Name</h3>
+          <table id="result">
+          </table>
+    </div>
+  </body>
+  <script>
+    let arr = [];
+    function addProduct() {
+      let productName = document.querySelector("#productName").value;
+      arr.push(productName);
+      document.querySelector("#productName").value = "";
+      showProduct();
+    }
+    function showProduct() {
+      let str = "";
+      arr.forEach(function(product, index){
+        str += `
+        <tr>
+            <td id="product${index}"> ${product} </td>
+            <td></td>
+            <td><button class="btn btn-edit"  id="edit${index}" onclick="editProduct(${index})">Edit</button></td>
+            <td><button class="btn btn-delete"  id="delete${index}" onclick="removeProduct(${index})">Delete</button></td>
+        </tr> `;
+      });
+      document.querySelector("#result").innerHTML = str;
+    }
+    function removeProduct(index){
+      let conf = confirm("Are you sure you want to delete \""+ arr[index] + "\" product?");
+      if(conf){
+        arr.splice(index,1);
+        showProduct();
+      }
+    }
+    function editProduct(index){
+      let productElement = document.querySelector(`#product${index}`);
+     let value= productElement.innerText;
+     productElement.innerHTML=`
+      <input id = "input${index}" type="text" oldValue="${value}" value="${value}">
+      <button class="btn btn-save" onclick="save(${index})" id = "save${index}">Save</button>
+      <button class="btn btn-cancel" onclick="cancel(${index})" id = "cancel${index}">Cancel</button>
+     `;
+     document.querySelector(`#edit${index}`).style.display="none";
+     document.querySelector(`#delete${index}`).style.display="none";
+    }
+    function save(index){
+      let newValue = document.querySelector(`#input${index}`).value;
+      arr[index]=newValue;
+      document.querySelector(`#product${index}`).innerText=newValue;
+      document.querySelector(`#edit${index}`).style.display="block";
+      document.querySelector(`#delete${index}`).style.display="block";
+    }
+    function cancel(index){
+      let oldValue = document.querySelector(`#input${index}`).getAttribute("oldValue");
+      document.querySelector(`#product${index}`).innerText=oldValue;
+      document.querySelector(`#edit${index}`).style.display="block";
+      document.querySelector(`#delete${index}`).style.display="block";
+    }
+  </script>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            border: none;
+            padding: 12px 20px;
+            
+            border-radius: 3px;
+            color:azure;
+            min-width: 40px;
+
+        }
+        .btn-add, .btn-edit{
+            background-color: #2ab116;
+        }
+        .btn-delete{
+            background-color: #e84118;
+        }
+        .btn-delete:hover{
+            background-color: #fa4831e8;
+        }
+        .btn-edit:hover, .btn-add:hover{
+            background-color: #47e03f;
+        }
+        #input{
+            padding: 10px;
+        }
+        table,tr,td{
+            border-collapse: collapse;
+
+        }
+       
+    </style>
+</head>
+<body>
+        <h3>Add New Product</h3>
+        <div>
+            <input type="text" id="input">
+            <button class="btn btn-add" 
+            id="add" onclick="addProduct()">Add</button>
+        </div>
+        <h3>Display all products</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th id="orNum">Number</th>
+                    <th colspan="2">Product Name</th>
+                    <th id="amount"></th>
+                </tr>
+            </thead>
+            <tbody id="tbProduct"></tbody>
+        </table>
+    <script>
+        function addProduct() {
+            var increment = 0;
+            let tbody = document.querySelector("#tbProduct");
+            let productName = document.querySelector("#input").value;
+            ++increment;
+            tbody.innerHTML += `
+        <tr id="tr_${increment}">
+            <td>${increment}</td>
+            <td colspan="2">${productName}</td>
+            <td>
+                <button class = "btn btn-edit"
+                onclick="editName()">Edit</button>
+            </td>
+            <td>
+                <button class = "btn btn-delete"
+                onclick="removeProduct(${increment})">Delete</button>
+            </td>
+            <td></td>
+        </tr>
+        `
+            document.querySelector("#input").value = "";
+        }
+        function removeProduct(id) {
+            document.querySelector(`#tr_${id}`).remove();
+        }
+        
+
+    </script>
+</body>
+
+</html>

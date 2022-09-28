@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+
+<head>
+    
+</head>
+    <p>Write some letter here !!!</p>
+    <input type="text" id="write" >    
+    <p><button type="button" onclick="change()">see the magic here</button></p>
+    <p id="RS" ></p>
+<body>
+    <script>
+        function change(){
+            let str = document.getElementById("write").value;
+            let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let LOWER = "abcdefghijklmnopqrstuvwxyz";
+            let RS = [];
+            
+
+            for (let x=0; x < str.length ; x++){
+                if (UPPER.indexOf(str[x]) !== -1){
+                    RS.push(str[x].toLowerCase());
+                }
+                else if (LOWER.indexOf(str[x]) !==1){
+                    RS.push(str[x].toUpperCase());
+                }
+                else {
+                    RS.push(str[x]);
+                }
+            }document.getElementById('RS').innerHTML=RS.join('');
+        }
+        
+        
+        // for (var x = 0; x < str.length; x++) {
+        //     if (UPPER.indexOf(str[x]) !== -1) {
+        //         result.push(str[x].toLowerCase());
+        //     }
+        //     else if (LOWER.indexOf(str[x]) !== -1) {
+        //         result.push(str[x].toUpperCase());
+        //     }
+        //     else {
+        //         result.push(str[x]);
+        //     }
+        // }
+        // document.write(result.join(''));
+    </script>
+
+</body>
+
+</html>

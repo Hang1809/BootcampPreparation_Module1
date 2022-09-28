@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form>
+        <table>
+            <tr>
+                <td><input type="number" name="month"></td>
+                <td>Tính số ngày</td>
+            </tr>
+            <tr>
+                
+                <td><input type="text" id="checkMonth()" readonly></td>
+                <td><button type="button" onclick="RS()" id="songay" >
+                    result</button></td>               
+            </tr>
+        </table>
+    </form>
+    </body>
+    <script>
+
+        function RS(){
+            let month= (Number(document.getElementsByName("month")[0].value));
+            let checkMonth = month ;
+                document.getElementById("checkMonth()").innerHTML = checkMonth;
+
+    
+        
+        switch (checkMonth){
+            case 1 :
+            case 3 :
+            case 5:
+            case 7 :
+            case 8 :
+            case 10 :
+            case 12 : 
+                document.getElementById("checkMonth()").value= `Tháng có 31 ngày`;
+                break;
+
+            case 2: 
+            document.getElementById("checkMonth()").value= "Tháng có 28 hoặc 29 ngày";
+                break;
+
+            case 4:
+            case 6 : 
+            case 11 : 
+            document.getElementById("checkMonth()").value= "Tháng có 30 ngày";
+                break;
+
+            default: "đây không phải là tháng"
+        }
+        }
+
+    </script>
+</html>

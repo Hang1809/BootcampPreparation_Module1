@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="bai1(5)">Bai 1</button><br>
+    <button type="button" onclick="bai2(5)">Bai 2</button><br>
+    <button type="button" onclick="bai3()">Bai 3</button><br>
+    <button type="button" onclick="bai4()">Bai 4</button><br>
+    <button type="button" onclick="bai5()">Bai 5</button><br>
+    <button type="button" onclick="bai6()">Bai 6</button><br>
+    <button type="button" onclick="bai7()">Bai 7</button><br>
+    <button type="button" onclick="bai8()">Bai 8</button><br>
+    <button type="button" onclick="bai9()">Bai 9</button>
+
+    <script>
+        function bai1() {
+            return alert(5 * 5);
+
+            // return alert(number * number);
+
+        }
+
+        function bai2(radius) {
+
+            alert(`Diện tích của hình tròn có r= ${radius} là:${Math.PI * radius ** 2}`);
+            alert(`Chu vi của hình tròn có r=${radius} là:${2 * Math.PI * radius}`);
+
+        }
+
+        function bai3(number) {
+            
+            if (number < 0) {
+                return `Khong ton tai giai thua cua ${number}`;
+            }
+            else if ( number ==0 || number == 1) { return `giai thua cua ${number} la 1` }
+            else {
+                // factorial = number * bai3(number - 1);
+                // return factorial;
+                
+                let factorial = 1;
+                for (let i=1; i <= number; i++ ){
+                     factorial*= i } 
+                     return factorial;
+                }
+            }
+            alert(bai3(10));
+        
+
+        function bai4(char) {
+
+            if (Number.isInteger(char)) {
+                return true;
+            } else {
+                return false;
+            }
+            // console.log("12 co phai la mot so khong? " + bai4(12)) ->true;
+            // console.log("'abc' co phai la mot so khong? " + bai4('abc')) ->false ;
+        }
+
+
+        function bai5(num1, num2, num3) {
+            let min;
+            num1 < num2 && num1 < num3 ? min = num1
+                : num2 < num3 ? min = num2
+                    : min = num3;
+            return min;
+
+            // console.log (bai5(8,7,9)) ->7
+        }
+
+
+        function bai6(number) {
+            return (number > 0) ? true : false;
+
+            // console.log (bai6(-6)) ->false
+        }
+
+        function bai7(num1, num2) {
+            let num;
+            num = num1;
+            num1 = num2;
+            num2 = num;
+            return `number1: ${num1}  number2: ${num2}`
+            // console.log(bai7(9,8)) ->number1: 8<br>  number2: 9
+        }
+
+        // // function bai8(arr) {
+        // //     return arr.reverse();
+        // //     console.log(bai8['1','2','3']) ->undefined 
+
+        // }
+
+        function bai9(arr, str) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (str == arr[i]) {
+                    count++;
+                }
+            }
+            if (count == 0) {
+                return -1;
+            } else {
+                return count;
+            }
+            // console.log(bai9(['a','b','1','2','c','d','d'],'d')) ->2
+            // console.log(bai9(['a','b','1','2','c','d'],'e')) -> -1
+        }
+            
+
+
+    </script>
+
+
+</body>
+
+</html>

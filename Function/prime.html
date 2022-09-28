@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Ta có dãy số nguyên tố là :</p>
+    <p><button type="button" onclick="isPrime()">Result</p>
+    <p id="result"></p>
+    <script>
+        
+
+        function isPrime(number) {
+            let i = 2;
+            for (; i < number; i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            if (i = number) {
+                return true;
+            }
+        }
+        for (let i = 2; i < 10000; i++) {
+            if (isPrime(i)) {
+                document.write(`${i} <br> `);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

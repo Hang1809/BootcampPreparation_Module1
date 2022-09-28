@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>Simple Grocery List App Example</title>
+    
+    <!-- Google Fonts CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Archivo+Narrow' rel='stylesheet' type='text/css'>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo.css">
+  
+  </head>
+  <body>
+ <header class="intro">
+ <h1>Simple Grocery List App Example </h1>
+ <p> A simple grocery shopping list using jQuery and Backbone JS.</p>
+
+ <div class="action">
+ <a href="https://www.codehim.com/vanilla-javascript/simple-grocery-list-app-in-javascript/" title="Back to download and tutorial page" class="btn back">Back to Tutorial</a>
+ </div>
+ </header>
+  
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+   <div class="wrapper">
+
+  <header>
+    Simple grocery list
+  </header>
+
+  <main>
+
+    <form>
+      <label for="item-input">Item</label>
+      <input type="text" id="item-input">
+      <label for="quantity-input">Quantity</label>
+      <input type="number" id="quantity-input">
+      <button type="submit" id="submit-btn">Add</button>
+    </form>
+
+    <div id="lists">
+      <p class="list__label">Still need to grab <span class="quantity" id="shopping-num"></span></p>
+      <ul id="shopping-list">
+      </ul>
+      <p class="list__label">In cart <span class="quantity" id="bought-num"></span></p>
+      <ul id="bought-list">
+      </ul>
+    </div>
+
+  </main>
+  <div class="push"></div>
+</div>
+
+<footer>
+  <a href="https://twitter.com/kearieggers" target="_blank">@kearieggers</a>
+</footer>  
+     <!-- END EDMO HTML (Happy Coding!)-->
+ </main>
+ 
+      
+  <footer class="credit">Author: Keari Eggers - Distributed By: <a title="Awesome web design code & scripts" href="https://www.codehim.com?source=demo-page" target="_blank">CodeHim</a></footer>
+  
+<!-- jQuery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+<!-- Lodash JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
+<!-- Backbone JS -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js'></script>
+<!-- Grocery List JS -->
+<script src="./js/script.js"></script>
+      
+      
+      
+  </body>
+</html>
